@@ -1,0 +1,372 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgColor: rgb(67, 68, 67);
+    --fontColor: #E54804;
+    --fontFamily: 'Lobster', cursive;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+/*Header of Page*/
+#header{
+    -webkit-position: sticky;
+    -moz-position: sticky;
+    -ms-position: sticky;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+    z-index: 3;
+}
+
+#icon{
+    width: 40px;
+    height: 40px;
+    background: url("../img/icon.png") center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+#selected-Item{
+    font-family: 'Lobster', cursive;
+    color: var(--fontColor);
+    vertical-align: middle;
+}
+#icon, #selected-Item{
+    display: inline-block;
+}
+#nav{
+    display: none;
+    position: relative;
+}
+#nav-bar{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    background-color: rgba(36, 35, 35, 0.466);
+    text-align: center;
+}
+#nav-bar li .nav-link{
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 500ms;
+    text-decoration: none;
+    color: rgb(216, 215, 215);
+    display: block;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px 0;
+}
+#nav-bar li .nav-link:hover{
+    color: var(--fontColor);
+}
+#nav-bar li{
+    list-style-type: none;
+    width: 100%;
+}
+#btn-Nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 8px;
+    background-color: rgb(202, 202, 202);
+    margin: 25px 10px;
+    border-radius: 4px;
+    z-index: 5;
+}
+#btn-Nav::after{
+ position: absolute;
+ display: block;
+ content: "";
+ width: inherit;
+ height: inherit;
+ top: -13px;
+ background-color: inherit;
+ border-radius: inherit;
+}
+#btn-Nav::before{
+ position: absolute;
+ display: block;
+ content: "";
+ width:  inherit;
+ height: inherit;
+ bottom: -13px;
+ background-color: inherit;
+ border-radius: inherit;
+}
+/**/
+
+/*FloatingButton*/
+#container-FB{
+    position: fixed;
+    width: auto;
+    height: auto;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+}
+#floatingButton{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: var(--fontColor);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 13px 17px;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 0px 2px 8px black;
+    cursor: pointer;
+}
+#floatingButton:focus{
+    outline: none;
+}
+/*searchBox*/
+#container-searchBox{
+    margin: 5vh auto 10px auto;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#txtBox{
+    width: 50vw;
+    padding: 10px 9vw 10px 16px;
+    border: none;
+    border-radius: 15px;
+}
+#txtBox:focus{
+    outline: none;
+    
+}
+#filters{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    border-radius: 0 5px 5px 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.281);
+    z-index: 2;
+    padding: 2px;
+}
+#filters li{
+    list-style-type: none;
+    text-align: center;
+}
+#filters li button{
+    display: block;
+    width: 100%;
+    padding: 10px 7px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: rgb(216, 215, 215);
+    font-weight: bold;
+}
+#filters li button:hover{
+    background-color: rgba(255, 255, 255, 0.884);
+    color: var(--fontColor);
+}
+#container-filters{
+    width: 6px;
+    height: 6px;
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    align-self: start;
+    cursor: pointer;
+    margin-right: 6px;
+}
+#container-filters::before{
+    display: block;
+    content: "";
+    background-color: inherit;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border-radius: inherit;
+    bottom: -24px;
+}
+#container-filters::after{
+    display: block;
+    content: "";
+    background-color: inherit;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border-radius: inherit;
+    bottom: -12px;
+}
+#container-texBox{
+    position: relative;
+}
+#btnSearch{
+    width: 8vw;
+    height: 35px;
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    border:none;
+    border-radius:0 15px 15px 0;
+    cursor: pointer;
+    background: url("../img/iconSearch.png") center no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.795);
+    outline: none;
+}
+#btnSearch:focus{
+    outline: none;
+}
+
+/*Formularios de entradas*/
+.frmCRUD{
+    width: 90vw;
+    max-height: 80vh;
+    position: fixed;
+    top: 18vh;
+    margin-bottom: 2vh;
+    left: 5vw;
+    background-color: var(--fontColor);
+    border-radius: 5px;
+    box-shadow: 0 1px 5px black;
+    z-index: 2;
+    overflow: auto;
+    display: none;
+}
+
+.frmCRUD .row{
+    height: auto;
+    width: 100%;
+    padding: 4px 0;
+}
+.headerFrm{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 8px;
+}
+#frmTitle{
+    text-align: center;
+    padding: 13px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    color: var(--fontColor);
+    font-size: 20px;
+}
+.frmCRUD .row #close{
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.frmCRUD .row input:not(#color), select, textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: white;
+    font-size: 19px;
+}
+.footerFrm{
+    text-align: center;
+    padding-bottom: 32px;
+}
+.footerFrm #btnSave{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 13px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--fontColor);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px -1px 6px rgba(0, 0, 0, 0.651);
+}
+.footerFrm #btnSave:focus{
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.651);
+}
+
+/*Notes*/
+#main{
+    padding-top: 10px;
+    overflow: auto;
+    height: 70vh;
+    width: 100%;
+}
+.mainFooter{
+    width: 50vw;
+    height: auto;
+    margin: auto;
+    background-color: var(--bgColor);
+    bottom: -10px;
+    text-align: center;
+}
+.mainFooter span{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: var(--bgColor);
+    margin: auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px){
+  #btn-Nav{
+      display: none;
+  }
+  #nav{
+      display: block;
+      position: absolute;
+      top: 40%;
+      right: 0;
+  }
+  #nav-bar{
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: black;
+    margin: 0;
+ }
+ #nav-bar li{
+     width: auto;
+ }
+ #nav-bar li .nav-link{
+   display: block;
+   padding: 0;
+   text-decoration: none;
+   color: rgb(216, 215, 215);
+   margin: 0 16px;
+ }
+}

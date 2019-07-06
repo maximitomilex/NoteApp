@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgColor: rgb(67, 68, 67);
+    --fontColor: #E54804;
+}
+
+body{
+    background-color: var(--bgColor);
+    text-align: center;
+}
+
+#cont{
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+#logo{
+    margin: 20px auto;
+    width: 90px;
+    height: 90px;
+    background: url("../img/icon.png") center no-repeat;
+    background-size: cover;
+}
+
+#title{
+    margin-top: -25px;
+    margin-bottom: 30px;
+    color: var(--fontColor);
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+}
+
+#frmLogin{
+    margin:auto;
+}
+#frmLogin div{
+    margin: 10px auto;
+}
+
+.textField{
+    width: 60%;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.938);
+    transition: 500ms width ease;
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.911);
+}
+
+.textField:focus{
+    outline: none;
+    width: 65%;
+}
+
+.textField::placeholder{
+    color: var(--fontColor);
+    font-family: 'Lobster', cursive;
+}
+
+.textField::-ms-input-placeholder{
+    color: var(--fontColor);
+    font-family: 'Lobster', cursive;
+}
+.textField:-ms-input-placeholder{
+    color: var(--fontColor);
+    font-family: 'Lobster', cursive;
+}
+
+.btn{
+    width: 40%;
+    padding: 7px 7px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--fontColor);
+    color: rgba(0, 0, 0, 0.918);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.911);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+#signUp{
+    color: rgb(172, 165, 165);
+}
+
+@media screen and (min-width: 844px){
+
+    #cont{
+        width: 40vw;
+        height: 40vh;
+    }
+}

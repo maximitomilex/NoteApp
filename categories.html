@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Note App | Categories</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/categorieStyle.css">
+        <meta name="description" content="This is a App web note">
+        <meta name="author" content="Maximo Junior">
+        <meta name="keywords" content="Note App, note app, app note, web note">
+    </head>
+    <body>
+        
+        <header id="header">
+            <div id="icon"></div>
+            <h1 id="selected-Item">Categories</h1>
+            <nav id="nav"> 
+               <ul id="nav-bar">
+                   <li><a class="nav-link" href="home.html">Home</a></li>
+                   <li><a class="nav-link" href="#">Categories</a></li>
+                   <li><a class="nav-link" href="settings.html">Settings</a></li>
+                   <li><a class="nav-link" href="user.html">User</a></li>
+                   <li><a class="nav-link" href="index.html">Sign out</a></li>
+               </ul>
+            </nav>
+            <div id="btn-Nav"> 
+            </div>
+        </header>
+        <div id="container-searchBox">
+            <div id="container-texBox">
+               <input type="text" id="txtBox" placeholder="Text...">
+               <button type="button" id="btnSearch" title="Search"></button>
+            </div>
+        </div>
+
+        <main id="main">  
+            <article class="itemCategorie">
+                <h3 class="titleCategorie">Social Media</h3>
+                 <button class="btnShowDescription">Description</button>
+                 <p class="description" id="j">KSJDFKJSKDFJKJAKJF AJSDDFKJEJKJKFJKJEI AJFJKJSF AJDKFJjaksjdfkjei adkfjkljej</p>
+            </article>
+        </main>
+
+        <form action="#" method="POST" id="frmAddCategorie" class="frmCRUD">
+            <div class="row headerFrm">
+                <p id="frmTitle">Add Categorie</p>
+                <div id="close">X</div>
+            </div>
+            <div class="row">
+               <input type="text" id="title" name="title" placeholder="Name">
+            </div>
+            <div class="row">
+               <span style="color: white; font-weight: bold; font-size: 18px; padding-left: 10px;">Color:</span> <input type="color" id="color" name="color" placeholder="color">
+             </div>
+            <div class="row">
+                <textarea placeholder="Description..." rows="3"></textarea>
+            </div>
+            <div class="row footerFrm">
+                <button type="button" id="btnSave" title="Save your note">Save</button>
+            </div>
+        </form>
+
+        <div id="container-FB">
+            <button type="button" id="floatingButton" title="Add Note">+</button>
+        </div>
+        <script src="js/controlesGenerales.js"></script>
+    </body>
+</html>

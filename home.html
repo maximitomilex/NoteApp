@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Note App | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
+        <meta name="description" content="This is a App web note">
+        <meta name="author" content="Maximo Junior">
+        <meta name="keywords" content="Note App, note app, app note, web note">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    </head>
+    <body>
+        
+        <header id="header">
+            <div id="icon"></div>
+            <h1 id="selected-Item">Note App</h1>
+            <nav id="nav"> 
+               <ul id="nav-bar">
+                   <li><a class="nav-link" href="#">Home</a></li>
+                   <li><a class="nav-link" href="categories.html">Categories</a></li>
+                   <li><a class="nav-link" href="settings.html">Settings</a></li>
+                   <li><a class="nav-link" href="user.html">User</a></li>
+                   <li><a class="nav-link" href="index.html">Sign out</a></li>
+               </ul>
+            </nav>
+            <div id="btn-Nav"> 
+            </div>
+        </header>
+
+        <div id="container-searchBox">
+            <div id="container-filters">
+                <ul id="filters">
+                     <li class="item-filter"><button>Name</button></li>
+                     <li class="item-filter"><button>Categories</button></li>
+                     <li class="item-filter"><button>Date</button></li>
+                </ul>
+            </div>
+            <div id="container-texBox">
+               <input type="text" id="txtBox" placeholder="Text...">
+               <button type="button" id="btnSearch" title="Search"></button>
+            </div>
+        </div>
+
+        <main id="main">  
+            <article class="note">
+                 <h3 class="noteTitle">Nota Title <span class="noteDate">19-3-2019</span></h3>
+                 <p class="noteContent">
+                     Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+                     Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+                 </p>
+            </article>
+            <article class="note">
+                <h3 class="noteTitle">Nota Title <span class="noteDate">19-3-2019</span></h3>
+                <p class="noteContent">
+                    Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+                    Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+                </p>
+           </article>
+           <article class="note">
+            <h3 class="noteTitle">Nota Title <span class="noteDate">19-3-2019</span></h3>
+            <p class="noteContent">
+                Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+                Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+            </p>
+         </article>
+       <article class="note">
+        <h3 class="noteTitle">Nota Title <span class="noteDate">19-3-2019</span></h3>
+        <p class="noteContent">
+            Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+            Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+        </p>
+       </article>
+       <article class="note">
+        <h3 class="noteTitle">Nota Title <span class="noteDate">19-3-2019</span></h3>
+        <p class="noteContent">
+            Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+            Notas jdfjljkejijkjfjlkfjlajdjfkjkdfj
+        </p>
+       </article>
+        </main>
+        <div class="mainFooter">
+            <span id="prev"><i class='fas fa-angle-double-left' style='font-size:24px; color: white;'></i></span>
+            <span id="nex"><i class='fas fa-angle-double-right' style='font-size:24px; color: white;'></i></span>
+        </div>
+
+        <form action="#" method="POST" id="frmAddNote" class="frmCRUD">
+            <div class="row headerFrm">
+                <p id="frmTitle">Add Note</p>
+                <div id="close">X</div>
+            </div>
+            <div class="row">
+                <select>
+                    <option id="j" value="" selected>Select a Category</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+            <div class="row">
+               <input type="text" id="title" name="title" placeholder="Title">
+            </div>
+            <div class="row">
+                <textarea placeholder="Write your note..." rows="4"></textarea>
+            </div>
+            <div class="row footerFrm">
+                <button type="button" id="btnSave" title="Save your note">Save</button>
+            </div>
+        </form>
+
+        <div id="container-FB">
+            <button type="button" id="floatingButton" title="Add Note">+</button>
+        </div>
+        <script src="js/controlesGenerales.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
